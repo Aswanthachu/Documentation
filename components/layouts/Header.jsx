@@ -67,7 +67,6 @@ const Header = () => {
         </div>
         {navBar && (
           <div
-            // className=" md:hidden py-5 flex-col space-y-3 origin-top z-40  transition-all ease-in-out duration-700"
             className={`top-0 left-0 w-screen p-5 flex-col space-y-3 bg-white   text-white fixed h-full overflow-scroll z-40  transition-all ease-in-out duration-1000 ${
               navBar ? "translate-y-[50px] " : "translate-y-[-100%]"
             }`}
