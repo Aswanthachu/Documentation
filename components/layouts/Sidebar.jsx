@@ -1,23 +1,28 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useRouter,usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const menuItems = [
-  { id: 1, label: "Home", link: "/" },
-  { id: 2, label: "Introduction", link: "/introduction" },
+  { id: 1, label: "Introduction", link: "/introduction" },
+  { id: 2, label: "Home", link: "/" },
   { id: 3, label: "Another page", link: "/another" },
 ];
 
 const Sidebar = () => {
   const router = useRouter();
+  const path=usePathname();
 
-  const [activePage, setActivePage] = useState("/");
+  const [activePage, setActivePage] = useState("/introduction");
 
   const handlePageChange = (link) => {
     setActivePage(link);
     router.replace(link);
   };
+
+  useEffect(()=>{
+    setActivePage(path);
+  },[])
 
   return (
     <div className="hidden md:w-30% lg:w-[20%] p-3 md:pl-8 lg:pl-16 md:flex flex-col gap-2">

@@ -8,8 +8,8 @@ import { GrClose } from "react-icons/gr";
 import { useRouter, usePathname } from "next/navigation";
 
 const menuItems = [
-  { id: 1, label: "Home", link: "/" },
-  { id: 2, label: "Introduction", link: "/introduction" },
+  { id: 1, label: "Introduction", link: "/introduction" },
+  { id: 2, label: "Home", link: "/" },
   { id: 3, label: "Another page", link: "/another" },
 ];
 
