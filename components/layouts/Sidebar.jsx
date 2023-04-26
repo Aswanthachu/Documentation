@@ -13,7 +13,7 @@ const Sidebar = () => {
   const router = useRouter();
   const path=usePathname();
 
-  const [activePage, setActivePage] = useState("/introduction");
+  const [activePage, setActivePage] = useState();
 
   const handlePageChange = (link) => {
     setActivePage(link);
